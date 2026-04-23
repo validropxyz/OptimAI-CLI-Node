@@ -57,13 +57,18 @@ Restart:
 ```
 sudo systemctl restart optimai
 ```
-✅ Quick Summary
-Install Docker (if needed)
-Install optimai-cli
-Login
-Start node
-Configure systemd for auto-start
 Stop:
 ```
 sudo systemctl stop optimai
 ```
+✅ Quick Summary
+
+Install Docker (if needed)
+
+Install optimai-cli
+
+Login
+
+Start node
+
+Configure systemd for auto-start
