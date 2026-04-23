@@ -53,6 +53,8 @@ View logs:
 ```
 journalctl -u optimai -f
 ```
+<img width="1487" height="604" alt="logs-optimai" src="https://github.com/user-attachments/assets/fb79af1c-8d7b-4a38-a169-7e2246db1e7b" />
+
 Restart:
 ```
 sudo systemctl restart optimai
