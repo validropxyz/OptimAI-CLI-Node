@@ -21,3 +21,43 @@ sudo mv optimai-cli /usr/local/bin/optimai-cli
 optimai-cli auth login --legacy
 ```
 ## 4. Create systemd Service (Auto Start)
+```
+sudo tee /etc/systemd/system/optimai.service > /dev/null <<EOF
+[Unit]
+Description=OptimAI Node Service
+After=network.target docker.service
+Requires=docker.service
+
+[Service]
+User=root
+WorkingDirectory=/root
+ExecStart=/usr/local/bin/optimai-cli node start
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
+EOF
+```
+## 5. Enable & Start Service
+```
+sudo systemctl daemon-reload
+sudo systemctl enable optimai
+sudo systemctl start optimai
+```
+Status:
+```
+sudo systemctl status optimai
+```
+View logs:
+```
+journalctl -u optimai -f
+```
+Restart:
+```
+sudo systemctl restart optimai
+```
+Stop:
+```
+sudo systemctl stop optimai
+```
