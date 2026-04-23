@@ -16,3 +16,8 @@ curl -L https://cli-node.optimai.network/optimai_cli_ubuntu -o optimai-cli
 chmod +x optimai-cli
 sudo mv optimai-cli /usr/local/bin/optimai-cli
 ```
+## 3. Login - Legacy (email/password)
+```
+optimai-cli auth login --legacy
+```
+## 4. Create systemd Service (Auto Start)
