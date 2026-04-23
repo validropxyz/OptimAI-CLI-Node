@@ -4,6 +4,6 @@
 ## 1. Check & Install Docker
 
 First, check if Docker is already installed:
-`
+```
 docker --version
-`
+```
